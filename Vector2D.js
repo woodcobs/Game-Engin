@@ -37,8 +37,12 @@ Vector2D.prototype = {
 
     cross: function (vectorB) {
         cX = this.y * vectorB.z - this.z * vectorB.y;
-        cY = this.x * vectorB.y - this.y * vectorB.x
+        cY = this.x * vectorB.y - this.y * vectorB.x;
         return new Vector2D(cX, cY);
+    },
+
+    toString: function () {
+        print("X: " + this.x + "Y: " + this.y);
     }
 }
 

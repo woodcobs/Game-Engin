@@ -45,6 +45,10 @@ Vector3D.prototype = {
         cY = this.z * vectorB.x - this.x * vectorB.z;
         cZ = this.x * vectorB.y - this.x * vectorB.y;
         return new Vector3D(cX, cY, cZ);
+    },
+
+    toString: function () {
+        print("X: " + this.x + "Y: " + this.y + "Z: " + this.z);
     }
 }
 
