@@ -4,7 +4,7 @@
     and vector rotation.
 */
 
-function Vector2D(x = 0, y = 0) {
+function Vector2D(x = 0, y = 0,) {
     this.x = x;
     this.y = y;
 }
@@ -37,12 +37,12 @@ Vector2D.prototype = {
 
     cross: function (vectorB) {
         cX = this.y * vectorB.z - this.z * vectorB.y;
-        cY = this.x * vectorB.y - this.y * vectorB.x;
+        cY = this.x * vectorB.y - this.x * vectorB.y;
         return new Vector2D(cX, cY);
     },
 
     toString: function () {
-        print("X: " + this.x + "Y: " + this.y);
+        return ("X: " + this.x + "\nY: " + this.y);
     }
 }
 
@@ -72,6 +72,6 @@ Vector2D.dot = function (a, b) {
 
 Vector2D.cross = function (a, b) {
     cX = a.y * b.z - a.z * b.y;
-    cY = a.x * b.y - a.y * b.x
+    cY = a.x * b.y - a.x * b.y;
     return new Vector2D(cX, cY);
 }

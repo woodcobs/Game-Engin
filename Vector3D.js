@@ -48,7 +48,7 @@ Vector3D.prototype = {
     },
 
     toString: function () {
-        print("X: " + this.x + "Y: " + this.y + "Z: " + this.z);
+        return ("X: " + this.x + "\nY: " + this.y + "\nZ: " + this.z);
     }
 }
 
@@ -86,3 +86,5 @@ Vector3D.cross = function (a, b) {
     cZ = a.x * b.y - a.x * b.y;
     return new Vector3D(cX, cY, cZ);
 }
+
+export { Vector3D }
