@@ -12,66 +12,68 @@ function Vector2D(x = 0, y = 0,) {
 
 Vector2D.prototype = {
     add: function (vectorB) {
-        cX = this.x + vectorB.x;
-        cY = this.y + vectorB.y;
+        var cX = this.x + vectorB.x;
+        var cY = this.y + vectorB.y;
         return new Vector2D(cX, cY);
     },
 
     subtract: function (vectorB) {
-        cX = this.x - vectorB.x;
-        cY = this.y - vectorB.y;
+        var cX = this.x - vectorB.x;
+        var cY = this.y - vectorB.y;
         return new Vector2D(cX, cY);
     },
 
     multiply: function (vectorB) {
-        cX = this.x * vectorB.x;
-        cY = this.y * vectorB.y;
+        var cX = this.x * vectorB.x;
+        var cY = this.y * vectorB.y;
         return new Vector2D(cX, cY);
     },
 
     dot: function (vectorB) {
-        cX = this.x + vectorB.x;
-        cY = this.y + vectorB.y;
+        var cX = this.x + vectorB.x;
+        var cY = this.y + vectorB.y;
         return cX + cY;
     },
 
     cross: function (vectorB) {
-        cX = this.y * vectorB.z - this.z * vectorB.y;
-        cY = this.x * vectorB.y - this.x * vectorB.y;
+        var cX = this.y * vectorB.z - this.z * vectorB.y;
+        var cY = this.x * vectorB.y - this.x * vectorB.y;
         return new Vector2D(cX, cY);
     },
 
     toString: function () {
-        return ("X: " + this.x + "\nY: " + this.y);
+        return ("(X, Y) = (" + this.x + ", " + this.y + ")");
     }
 }
 
 Vector2D.add = function (a, b) {
-    cX = a.x + b.x;
-    cY = a.y + b.y;
+    var cX = a.x + b.x;
+    var cY = a.y + b.y;
     return new Vector2D(cX, cY);
 }
 
 Vector2D.subtract = function (a, b) {
-    cX = a.x - b.x;
-    cY = a.y - b.y;
+    var cX = a.x - b.x;
+    var cY = a.y - b.y;
     return new Vector2D(cX, cY);
 }
 
 Vector2D.multiply = function (a, b) {
-    cX = a.x * b.x;
-    cY = a.y * b.y;
+    var cX = a.x * b.x;
+    var cY = a.y * b.y;
     return new Vector2D(cX, cY);
 }
 
 Vector2D.dot = function (a, b) {
-    cX = a.x * b.x;
-    cY = a.y * b.y;
+    var cX = a.x * b.x;
+    var cY = a.y * b.y;
     return cX + cY;
 }
 
 Vector2D.cross = function (a, b) {
-    cX = a.y * b.z - a.z * b.y;
-    cY = a.x * b.y - a.x * b.y;
+    var cX = a.y * b.z - a.z * b.y;
+    var cY = a.x * b.y - a.x * b.y;
     return new Vector2D(cX, cY);
 }
+
+export { Vector2D }

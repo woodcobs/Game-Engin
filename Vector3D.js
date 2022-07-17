@@ -13,77 +13,77 @@ function Vector3D(x = 0, y = 0, z = 0) {
 
 Vector3D.prototype = {
     add: function (vectorB) {
-        cX = this.x + vectorB.x;
-        cY = this.y + vectorB.y;
-        cZ = this.z + vectorB.z;
+        var cX = this.x + vectorB.x;
+        var cY = this.y + vectorB.y;
+        var cZ = this.z + vectorB.z;
         return new Vector3D(cX, cY, cZ);
     },
 
     subtract: function (vectorB) {
-        cX = this.x - vectorB.x;
-        cY = this.y - vectorB.y;
-        cZ = this.z - vectorB.z;
+        var cX = this.x - vectorB.x;
+        var cY = this.y - vectorB.y;
+        var cZ = this.z - vectorB.z;
         return new Vector3D(cX, cY, cZ);
     },
 
     multiply: function (vectorB) {
-        cX = this.x * vectorB.x;
-        cY = this.y * vectorB.y;
-        cZ = this.z * vectorB.z;
+        var cX = this.x * vectorB.x;
+        var cY = this.y * vectorB.y;
+        var cZ = this.z * vectorB.z;
         return new Vector3D(cX, cY, cZ);
     },
 
     dot: function (vectorB) {
-        cX = this.x + vectorB.x;
-        cY = this.y + vectorB.y;
-        cZ = this.z + vectorB.z;
+        var cX = this.x * vectorB.x;
+        var cY = this.y * vectorB.y;
+        var cZ = this.z * vectorB.z;
         return cX + cY + cZ;
     },
 
     cross: function (vectorB) {
-        cX = this.y * vectorB.z - this.z * vectorB.y;
-        cY = this.z * vectorB.x - this.x * vectorB.z;
-        cZ = this.x * vectorB.y - this.x * vectorB.y;
+        var cX = this.y * vectorB.z - this.z * vectorB.y;
+        var cY = this.z * vectorB.x - this.x * vectorB.z;
+        var cZ = this.x * vectorB.y - this.x * vectorB.y;
         return new Vector3D(cX, cY, cZ);
     },
 
     toString: function () {
-        return ("X: " + this.x + "\nY: " + this.y + "\nZ: " + this.z);
+        return ("(X, Y, Z) = (" + this.x + ", " + this.y + ", " + this.z + ")");
     }
 }
 
 Vector3D.add = function (a, b) {
-    cX = a.x + b.x;
-    cY = a.y + b.y;
-    cZ = a.z + b.z;
+    var cX = a.x + b.x;
+    var cY = a.y + b.y;
+    var cZ = a.z + b.z;
     return new Vector3D(cX, cY, cZ);
 }
 
 Vector3D.subtract = function (a, b) {
-    cX = a.x - b.x;
-    cY = a.y - b.y;
-    cZ = a.z - b.z;
+    var cX = a.x - b.x;
+    var cY = a.y - b.y;
+    var cZ = a.z - b.z;
     return new Vector3D(cX, cY, cZ);
 }
 
 Vector3D.multiply = function (a, b) {
-    cX = a.x * b.x;
-    cY = a.y * b.y;
-    cZ = a.z * b.z;
+    var cX = a.x * b.x;
+    var cY = a.y * b.y;
+    var cZ = a.z * b.z;
     return new Vector3D(cX, cY, cZ);
 }
 
 Vector3D.dot = function (a, b) {
-    cX = a.x * b.x;
-    cY = a.y * b.y;
-    cZ = a.z * b.z;
+    var cX = a.x * b.x;
+    var cY = a.y * b.y;
+    var cZ = a.z * b.z;
     return cX + cY + cZ;
 }
 
 Vector3D.cross = function (a, b) {
-    cX = a.y * b.z - a.z * b.y;
-    cY = a.z * b.x - a.x * b.z;
-    cZ = a.x * b.y - a.x * b.y;
+    var cX = a.y * b.z - a.z * b.y;
+    var cY = a.z * b.x - a.x * b.z;
+    var cZ = a.x * b.y - a.x * b.y;
     return new Vector3D(cX, cY, cZ);
 }
 
