@@ -10,6 +10,44 @@ function Vector(x = 0, y = 0, z = 0) {
     this.z = z;
 }
 
+
+Vector.prototype = {
+    add: function (vectorB) {
+        cX = this.x + vectorB.x;
+        cY = this.y + vectorB.y;
+        cZ = this.z + vectorB.z;
+        return Vector(cX, cY, cZ);
+    },
+
+    subtract: function (vectorB) {
+        cX = this.x - vectorB.x;
+        cY = this.y - vectorB.y;
+        cZ = this.z - vectorB.z;
+        return Vector(cX, cY, cZ);
+    },
+
+    multiply: function (vectorB) {
+        cX = this.x * vectorB.x;
+        cY = this.y * vectorB.y;
+        cZ = this.z * vectorB.z;
+        return Vector(cX, cY, cZ);
+    },
+
+    dot: function (vectorB) {
+        cX = this.x + vectorB.x;
+        cY = this.y + vectorB.y;
+        cZ = this.z + vectorB.z;
+        return cX + cY + cZ;
+    },
+
+    cross: function (vectorB) {
+        cX = this.y * vectorB.z - this.z * vectorB.y;
+        cY = this.z * vectorB.x - this.x * vectorB.z;
+        cZ = this.x * vectorB.y - this.x * vectorB.y;
+        return Vector(cX, cY, cZ);
+    }
+}
+
 Vector.add = function (a, b) {
     cX = a.x + b.x;
     cY = a.y + b.y;
