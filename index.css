@@ -1,16 +1,42 @@
 canvas {
+    width: 880px;
+    height: 560px;
     border: 5px solid black;
     display: block;
     margin: auto;
-    background: rgb(81, 81, 81);
+    background: #FFFFFF;
     position: absolute;
     padding: 0;
     top: 0;
-    bottom: 0;
+    bottom: 100;
     left: 0;
     right: 0;
+    
 }
 
 body {
-    background-color: rgb(54, 54, 54);
+    background-color: #9490CC;
+}
+
+#title {
+    font-family:Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-shadow: 0 3px #000000, 0 0 5px #000000;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#insertButton {
+    width: 80px;
+    height: 80px;
+    display: block;
+    position: absolute;
+    margin: auto;
+    
+    padding: 0;
+    left: 0;
+    right: 0;
+
+    border: 3px solid black;
+    
 }
